@@ -49,7 +49,7 @@ footer {
 .contact .contact-content {
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
+	align-items: start;
 	justify-content: space-between;
 }
 section .title {
@@ -169,7 +169,11 @@ section .title::after {
 /* home section styling */
 .home {
 	display: flex;
-	background: url("images/umar.png") no-repeat center;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	/* background: url("images/umar.png") no-repeat center; */
+	background: black;
 	height: 100vh;
 	color: #fff;
 	min-height: 500px;
@@ -177,6 +181,20 @@ section .title::after {
 	background-attachment: fixed;
 	font-family: "Ubuntu", sans-serif;
 }
+.home img {
+	display: none;
+	margin-right: 80px;
+}
+
+@media (min-width: 768px) {
+	.home img {
+		display: block;
+		max-width: 600px;
+		max-height: 400px;
+	}
+}
+
+
 .home .max-width {
 	margin: auto 0 auto 30px;
 }
@@ -367,6 +385,7 @@ section .title::after {
 	width: 90%;
 }
 .skills-content .right .css::before {
+	margin-top: 200px;
 	width: 60%;
 }
 .skills-content .right .js::before {
@@ -379,6 +398,11 @@ section .title::after {
 	width: 70%;
 }
 
+.tools-heading {
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
 /* teams section styling */
 .teams a {
 	color: rgb(223, 119, 140);
@@ -690,4 +714,10 @@ footer span a:hover {
 		font-size: 23px;
 		line-height: 38px;
 	}
+}
+
+
+ul {
+	list-style-type: circle;
+	padding-left: 20px;
 }
